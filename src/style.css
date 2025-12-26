@@ -498,8 +498,16 @@ ul {
 }
 
 .project-image {
-  height: 200px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 250px; /* 원하는 높이로 조절 */
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 98%;
+  height: 100%;
+  object-fit: cover; /* 비율 유지하며 컨테이너 채우기 */
+  object-position: center; /* 이미지를 중앙 정렬 */
 }
 
 .project-placeholder {
