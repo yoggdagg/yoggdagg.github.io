@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 기술 스택의 아이콘 추가를 위한 라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <title>주요한 - 백엔드 개발자 포트폴리오</title>
-    <script type="module" crossorigin src="/assets/index-D_IjYIiF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BHKNy5e9.css">
+    <script type="module" crossorigin src="/assets/index-BJ_Jm_ek.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DjcDj8xO.css">
   </head>
   <body>
     <!-- 네비게이션 -->
@@ -110,50 +115,118 @@
       <div class="container">
         <h2 class="section-title">Tech Stack</h2>
         <div class="skills-grid">
+          <!-- Backend -->
           <div class="skill-category">
             <h3>Backend</h3>
             <div class="skill-items">
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">Spring Boot</span>
-              <span class="skill-tag">Spring Security</span>
-              <span class="skill-tag">JSP/Servlet</span>
-              <span class="skill-tag">MyBatis</span>
-              <span class="skill-tag">iBATIS</span>
+              <div class="skill-item">
+                <i class="devicon-java-plain colored"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-spring-plain colored"></i>
+                <span>Spring Boot</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-spring-plain colored"></i>
+                <span>Spring Security</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-java-plain colored"></i>
+                <span>JSP/Servlet</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-mybatis-plain colored"></i>
+                <span>MyBatis</span>
+              </div>
             </div>
           </div>
+
+          <!-- Frontend -->
           <div class="skill-category">
             <h3>Frontend</h3>
             <div class="skill-items">
-              <span class="skill-tag">Vue.js</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">jQuery</span>
-              <span class="skill-tag">HTML/CSS</span>
+              <div class="skill-item">
+                <i class="devicon-vuejs-plain colored"></i>
+                <span>Vue.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-jquery-plain colored"></i>
+                <span>jQuery</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML/CSS</span>
+              </div>
             </div>
           </div>
+
+          <!-- Database -->
           <div class="skill-category">
             <h3>Database</h3>
             <div class="skill-items">
-              <span class="skill-tag">MySQL/MariaDB</span>
-              <span class="skill-tag">MS-SQL</span>
+              <div class="skill-item">
+                <i class="devicon-mysql-plain colored"></i>
+                <span>MySQL/MariaDB</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-microsoftsqlserver-plain colored"></i>
+                <span>MS-SQL</span>
+              </div>
             </div>
           </div>
+
+          <!-- Tools & Environment -->
           <div class="skill-category">
             <h3>Tools & Environment</h3>
             <div class="skill-items">
-              <span class="skill-tag">Git/GitHub</span>
-              <span class="skill-tag">Tomcat</span>
-              <span class="skill-tag">Linux</span>
-              <span class="skill-tag">Windows Server</span>
-              <span class="skill-tag">Shell Script</span>
+              <div class="skill-item">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git/GitHub</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-tomcat-plain colored"></i>
+                <span>Tomcat</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-linux-plain colored"></i>
+                <span>Linux</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-windows8-original colored"></i>
+                <span>Windows Server</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-bash-plain colored"></i>
+                <span>Shell Script</span>
+              </div>
             </div>
           </div>
+
+          <!-- Security -->
           <div class="skill-category">
             <h3>Security</h3>
             <div class="skill-items">
-              <span class="skill-tag">IPS</span>
-              <span class="skill-tag">VPN</span>
-              <span class="skill-tag">EMS</span>
-              <span class="skill-tag">네트워크 보안</span>
+              <div class="skill-item">
+                <i class="fa fa-shield"></i>
+                <span>IPS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa fa-lock"></i>
+                <span>VPN</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa fa-server"></i>
+                <span>EMS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa fa-network-wired"></i>
+                <span>네트워크 보안</span>
+              </div>
             </div>
           </div>
         </div>
@@ -252,17 +325,25 @@
 
           <div class="project-card">
             <div class="project-image">
-              <div class="project-placeholder">SSAFY Project</div>
+              <img src="snapway_mainpage.jpeg" alt="snapway_mainpage" />
             </div>
             <div class="project-content">
-              <h3>SSAFY 팀 프로젝트 (진행 중)</h3>
-              <p class="project-period">2025.11 - 현재</p>
+              <h3>SnapWay - AI 여행 다이어리 플랫폼</h3>
+              <p class="project-period">2025.11 - 2025.12 (6주)</p>
               <p class="project-description">
-                Spring Boot와 Vue.js를 활용한 웹 애플리케이션 개발 프로젝트
+                사진 기반 AI 분석을 통해 여행 기록을 자동 생성하고 개인 맞춤형
+                여행지를 추천하는 풀스택 웹 애플리케이션. Spring Security를
+                활용한 JWT 인증, Gemini AI API를 통한 이미지 분석, Kakao Maps
+                API 연동을 구현했습니다.
               </p>
+              <p class="project-role">
+                <strong>담당 역할:</strong> 백엔드 개발 및 보안, AI API 연동,
+                인프라 구축 (Raspberry Pi 서버)
+              </p>
+              <br />
               <div class="project-links">
                 <a
-                  href="YouTube 임시 링크"
+                  href="https://youtu.be/gJGynZHWu0g"
                   target="_blank"
                   class="btn btn-primary"
                 >
@@ -273,7 +354,7 @@
                   target="_blank"
                   class="btn btn-secondary"
                 >
-                  💻 코드 보기
+                  💻 깃허브 보기
                 </a>
               </div>
               <div class="project-tags">
