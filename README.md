@@ -1,5 +1,223 @@
-# Vue 3 + Vite
+<div align="center">
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# 📸 SnapWay (스냅 웨이)
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+**사진 기반 AI 여행 다이어리 서비스**
+
+_Your Journey, Documented Automatically._
+
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green)
+![Vue.js](https://img.shields.io/badge/Vue.js-3.x-brightgreen)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+
+</div>
+
+---
+
+## 📋 목차
+
+- [프로젝트 개요](#프로젝트-개요)
+- [프로젝트 배경 및 필요성](#프로젝트-배경-및-필요성)
+- [주요 기능](#주요-기능)
+- [기술 스택](#기술-스택)
+- [시스템 아키텍처](#시스템-아키텍처)
+- [팀원](#팀원)
+- [협업 규칙](#협업-규칙)
+- [프로젝트 문서](#프로젝트-문서)
+
+---
+
+## 🎯 프로젝트 개요
+
+- **프로젝트명**: SnapWay (스냅 웨이)
+- **주제**: 사진 기반 AI 여행 다이어리 서비스
+- **한 줄 소개**: 사용자의 여행 사진을 AI가 분석하여 자동으로 기록하고, 개인 맞춤형 여행지를 추천하는 스마트 여행 다이어리
+- **개발 기간**: 2025년 11월 17일 ~ 12월 25일 (약 6주)
+- **팀 구성**: 3인
+
+---
+
+## 💡 프로젝트 배경 및 필요성
+
+### 🚩 문제 인식
+
+- **정리의 어려움**: 여행 후 수백 장의 사진이 갤러리에 방치되어 소중한 추억을 제대로 정리하지 못함
+- **감성 부재**: 기존 여행 앱은 단순 장소 기록(POI) 중심이라 감성적인 추억 보관이 어려움
+- **추천의 한계**: 여행 계획 시 사용자의 취향(자연, 도시, 액티비티 등)을 정밀하게 반영한 추천이 부족함
+
+### 💡 해결 방안
+
+- **시각적 추억 보관**: 텍스트보다 사진 중심의 기록으로 여행의 순간을 생생하게 저장
+- **자동화된 편의성**: AI 자동 분석을 통해 번거로운 태깅과 정리 과정을 최소화
+- **개인화 추천**: 사용자의 사진 데이터를 학습하여 취향을 저격하는 맞춤형 여행지 추천
+
+### 🎯 핵심 목표
+
+- **자동화**: 사진 업로드만으로 위치, 날짜, 내용이 포함된 여행 기록 자동 생성
+- **개인화**: AI 기반 취향 분석을 통한 만족도 높은 여행지 추천 서비스 구현
+- **기술 성장**: Spring Boot, Vue.js, MySQL, AI API를 활용한 실전 풀스택 웹 개발 역량 강화
+
+### 📈 기대 효과
+
+- **사용자**: 여행 정리 시간 약 80% 절약, 감성적이고 체계적인 추억 아카이빙
+- **기술적**: RESTful API 설계, 대용량 이미지 처리, AI 모델 연동, DB 최적화 경험 축적
+- **차별화**: 기존 앱 대비 **사진 기반 자동화**와 **AI 개인화**라는 확실한 강점 확보
+
+---
+
+## ✨ 주요 기능
+
+### ✅ 핵심 기능 (MVP)
+
+#### 1) 사진 기반 여행 기록 생성
+
+- 사진 업로드 시 **EXIF 메타데이터**(위도, 경도, 시간)를 추출하여 지도에 핀(Marker) 자동 표시
+- 여행 경로를 타임라인 형태로 시각화하여 동선 파악 용이
+- 달력(Calendar) 뷰를 통해 날짜별 여행 기록 조회
+
+#### 2) AI 이미지 태깅 및 스마트 검색
+
+- 업로드된 사진을 AI가 분석하여 장소, 음식, 활동, 분위기 등의 태그 자동 생성
+- 자연어 검색(NLQ) 지원: "작년 여름 바다에서 먹은 음식 보여줘" 와 같은 질문형 검색 가능
+- 구현 기술: Perplexity API (또는 Google Vision API)
+
+#### 3) 사진 기반 개인 취향 분석 및 여행지 추천
+
+- 사용자의 과거 여행 사진 패턴 분석 (예: 자연 40%, 도시 30%, 음식 20%, 액티비티 10%)
+- 분석된 데이터를 바탕으로 협업 필터링(Collaborative Filtering) 알고리즘을 적용해 취향에 맞는 새 여행지 추천
+- 구현 기술: MySQL 데이터 축적 후 추천 알고리즘 적용
+
+#### 4) AI 여행 경로 최적화
+
+- 가고 싶은 장소들을 선택(Basket)하면 최적의 이동 동선 자동 생성
+- 이동 시간과 장소별 영업시간을 고려한 스마트 일정 추천
+- 구현 기술: Kakao Maps API + 경로 최적화 알고리즘
+
+### ➕ 부가 기능
+
+#### 5) 여행 다이어리 공유
+
+- 여행 기록(Trip)의 공개/비공개(PUBLIC/PRIVATE) 설정
+- SNS 스타일의 피드(Feed)를 통해 다른 사용자의 여행기 탐색 및 좋아요/댓글 소통
+
+#### 6) 여행 통계 대시보드
+
+- 올해 방문한 도시 수, 가장 많이 간 지역, 나의 여행 스타일(키워드) 분석 리포트 제공
+
+---
+
+## 🛠 기술 스택
+
+| 분류          | 기술 스택                                                         |
+| ------------- | ----------------------------------------------------------------- |
+| **Backend**   | Java 17, Spring Boot 3.x, MyBatis                                 |
+| **Frontend**  | Vue.js 3.x, Axios, HTML5/CSS3 (Responsive)                        |
+| **Database**  | MySQL 8.0                                                         |
+| **AI & API**  | Gemini Flash 2.5 (이미지/자연어 분석), Kakao Maps API (지도/경로) |
+| **Infra**     | Local (차후 AWS/클라우드 서버 구축 예정)                          |
+| **협업 도구** | Git/GitHub (형상 관리), Notion (문서화)                           |
+
+---
+
+## 🏗 시스템 아키텍처
+
+### Use-Case Diagram
+
+![SnapWay Use-Case Diagram](docs/images/snapway_uml.png)
+
+### ERD (Entity Relationship Diagram)
+
+![SnapWay ERD](docs/images/snapway_erd.png)
+
+---
+
+## 👥 팀원
+
+| 이름   | 역할                                                | GitHub                                   |
+| ------ | --------------------------------------------------- | ---------------------------------------- |
+| 주요한 | Backend, 인프라 구축(Linux, Raspberry Pi), Security | [@yoggdagg](https://github.com/yoggdagg) |
+| 손홍민 | Frontend, UI/UX                                     |                                          |
+| 기장선 | Frontend, API 연동                                  |                                          |
+
+---
+
+## 📝 협업 규칙
+
+### 🌿 Git Branch Strategy
+
+Git Flow 전략을 기반으로 운영합니다.
+
+- `main`: 배포 가능한 안정 버전 (Production)
+- `develop`: 개발 중인 버전 (Development)
+- `feature/*_name`: 기능 단위 개발 브랜치 (예: `feature/login_KimSSAFY`, `feature/map-view_KimSSAFY`)
+
+### 💬 Commit Convention
+
+`[Type] Subject` 형식을 따릅니다. (예: `[Feat] 로그인 기능 구현`)
+
+- `Feat`: 새로운 기능 추가
+- `Fix`: 버그 수정
+- `Docs`: 문서 수정 (README, Wiki, 주석 작성 등)
+- `Style`: 코드 포맷팅, 세미콜론 누락 등 (비즈니스 로직 변경 없음)
+- `Refactor`: 코드 리팩토링
+- `Test`: 테스트 코드 추가/수정
+- `Chore`: 빌드 업무 수정, 패키지 매니저 수정, 설정 변경
+
+### 📢 PR (Pull Request) 규칙
+
+- **Title**: 커밋 메시지 컨벤션과 동일하게 작성
+- **Description**: 작업 내용, 변경 사항, 특이 사항(Breaking Change) 등을 간략히 기술
+- **Review**: 최소 1명 이상의 팀원 승인을 받은 후 `develop` 브랜치에 Merge
+
+---
+
+## 📂 프로젝트 문서
+
+- [Use-Case 명세서](docs/1.Use-Case.pdf)
+- [클래스 다이어그램](docs/2.클래스다이어그램.svg)
+- [ERD 다이어그램](docs/3.ERD.pdf)
+- [WBS](docs/4.WBS.xlsx)
+- [간트차트](docs/4.간트차트.pdf)
+- [화면 설계서](docs/5.화면설계서.pptx)
+- [DB 스키마](docs/6.schema.sql)
+- [활용 데이터셋](docs/8.활용데이터셋.pdf)
+- [발표 자료](docs/9.발표용.pptx)
+
+---
+
+## 📄 요구사항 분석
+
+### 👤 회원 (Member)
+
+- **회원가입/로그인**: 일반 이메일 가입 및 소셜 로그인(Kakao/Google) 지원, JWT 기반 인증
+- **프로필 관리**: 닉네임, 프로필 사진 변경, 비밀번호 수정
+- **여행 스타일 진단**: 가입 시 선호하는 여행 스타일(자연, 도시, 휴양 등) 선택
+
+### 🗺 여행 기록 (Trip & Record)
+
+- **여행 생성**: 여행 제목, 기간, 공개 범위(PUBLIC/PRIVATE) 설정
+- **사진 업로드**: 다중 이미지 업로드 지원, EXIF 메타데이터(위치, 시간) 자동 추출
+- **기록 시각화**: 지도 위 마커(Pin) 표시, 방문 순서대로 타임라인 자동 정렬
+- **기록 편집**: AI가 자동 생성한 내용을 사용자가 수동으로 수정/삭제 가능
+
+### 🤖 AI 및 분석 (AI Analysis)
+
+- **이미지 태깅**: 사진 속 객체(음식, 풍경, 건물) 인식 후 검색용 해시태그 자동 생성
+- **AI 일기 생성**: 사진의 분위기, 시간, 장소 정보를 바탕으로 감성적인 짧은 일기 자동 작성
+- **취향 분석**: 누적된 여행 데이터를 기반으로 사용자 선호도 수치화
+
+### 🔍 검색 및 추천 (Search & Recommendation)
+
+- **자연어 검색**: "작년 제주도에서 먹은 고기국수" 등 문장형 검색 쿼리 처리
+- **맞춤 추천**: 사용자 취향 벡터와 유사한 여행지/코스를 협업 필터링으로 추천
+
+---
+
+<div align="center">
+
+**SnapWay** - 당신의 여행, 자동으로 기록됩니다.
+
+Made with ❤️ by Yohan
+
+</div>
